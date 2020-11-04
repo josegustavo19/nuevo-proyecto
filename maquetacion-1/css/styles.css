@@ -6,6 +6,59 @@ body {
     background-color: rgb(19, 61, 61);
     background-image: url("../img/paven.png");
 }
+/* FORMULARIOS */
+input [type="text"],
+input [type="email"],
+input [type="password"],
+select{
+
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray; 
+}
+input [type="text"]:focus,
+input [type="email"]:focus,
+input [type="password"]:focus,
+select:focus{ /* La pseudo-clase :focus CSS representa un elemento (como una entrada de formulario) que ha recibido el foco. */
+    border: 1px solid #70b231;
+    color: black;
+}   
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+    display: block;
+    border-radius: 2px;
+    border: 1px solid green;
+    width: 60px;
+    padding: 3px;
+    color: white;
+    background-color: #70b231;
+    cursor: pointer;
+
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 1px #ccc;
+}
+
+
 /* CABECERA */
 header {
     min-width: 1024px;
@@ -86,3 +139,79 @@ nav > ul > li:hover {
     background-color: #70b231;
     box-shadow: 0px 0px 4px green inset;
 }
+
+/* MENU DESPLEGABLE */
+
+nav > ul > li > ul {
+    display: none; /* La propiedad CSS display especifica si un elemento es tratado como block or inline */
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+}
+nav > ul > li:hover > ul > li{
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+} 
+nav > ul > li:hover > ul > li a{
+    color: #666666;
+}
+nav > ul > li:hover > ul > li:hover{
+    background: #70b231;
+    box-shadow: 0px 0px 2px #ccc inset;
+} 
+/* CONTENIDO */
+.content{
+    width: 1250;
+    min-height: 1100px;
+    margin: 0px auto;
+}
+#aside{
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #cccc;
+    font-family: sans-serif, Arial, Helvetica, sans-serif ;
+}
+#aside .widget{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+
+}
+#aside .widget:last-child{ /* last-child es una pseudoclase */
+    margin-bottom: 20px;
+
+}
+#aside h3{
+    display: block;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+/* FORMULARIOS BARRA LATERAL */
+#aside 
