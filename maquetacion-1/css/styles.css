@@ -6,10 +6,20 @@ body {
     background-color: rgb(19, 61, 61);
     background-image: url("../img/paven.png");
 }
+a{
+    color: #a8be51ef;
+    text-decoration: none;
+}
+a:hover{
+    color: #0f110c;
+}
+a:visited{
+    color: green;
+}
 /* FORMULARIOS */
-input [type="text"],
-input [type="email"],
-input [type="password"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
 select{
 
     border: 1px solid #c9c9c9;
@@ -20,9 +30,9 @@ select{
     padding-bottom: 2px;
     color: gray; 
 }
-input [type="text"]:focus,
-input [type="email"]:focus,
-input [type="password"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 select:focus{ /* La pseudo-clase :focus CSS representa un elemento (como una entrada de formulario) que ha recibido el foco. */
     border: 1px solid #70b231;
     color: black;
@@ -35,6 +45,7 @@ button{
     display: block;
     border-radius: 2px;
     border: 1px solid green;
+    /* margin-top: 5px; */
     width: 60px;
     padding: 3px;
     color: white;
@@ -176,7 +187,8 @@ nav > ul > li:hover > ul > li:hover{
     min-height: 1100px;
     margin: 0px auto;
 }
-#aside{
+#aside, #frase{
+    clear: both; /* con este elemento un elemento aside se pone arriba de otro */
     width: 200px;
     float: left;
     margin: 30px;
@@ -185,6 +197,13 @@ nav > ul > li:hover > ul > li:hover{
     box-shadow: 0px 2px 2px #cccc;
     font-family: sans-serif, Arial, Helvetica, sans-serif ;
 }
+#frase{
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
 #aside .widget{
     display: block;
     width: 180px;
@@ -207,11 +226,39 @@ nav > ul > li:hover > ul > li:hover{
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    margin-bottom: 15px;
     background: #f2f3f2;
     border: 1px solid #ccc;
     border-left: none;
     border-right: none;
 }
+#aside li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
 
 /* FORMULARIOS BARRA LATERAL */
-#aside 
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"],
+#aside div a{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+#aside input,
+#aside label{
+    margin: 0px auto;
+    text-align: center;
+}
