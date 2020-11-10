@@ -198,6 +198,7 @@ nav > ul > li:hover > ul > li:hover{
     font-family: sans-serif, Arial, Helvetica, sans-serif ;
 }
 #frase{
+    clear: both;
     width: 180px;
     padding: 10px;
     font-size: 14px;
@@ -261,4 +262,42 @@ nav > ul > li:hover > ul > li:hover{
 #aside label{
     margin: 0px auto;
     text-align: center;
+}
+/* secciones */
+#sections {
+    float: right;
+    width: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+
+}
+
+#sections .titulo {
+    font-family: "fajala";
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9 ;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+}
+#sections .article{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+#sections .date{
+    color: gray;
+    font-size: 14px;
 }
